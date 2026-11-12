@@ -6,7 +6,7 @@
 #    By: aradix <444nt000@proton.me>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/19 14:00:00 by aradix            #+#    #+#              #
-#    Updated: 2026/11/12 18:34:42 by aradix           ###   ########.fr        #
+#    Updated: 2026/11/12 19:45:15 by aradix           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRCS			= ft_printf.c \
 						handlers/handle_uint.c \
 						handlers/handle_hex.c \
 						handlers/handle_percent.c \
+						utils/ft_putnbr_base.c \
+						utils/ft_strlen.c \
 
 OBJS			= $(SRCS:.c=.o)
 

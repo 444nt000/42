@@ -6,7 +6,7 @@
 /*   By: aradix <444nt000@proton.me>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 13:23:15 by aradix            #+#    #+#             */
-/*   Updated: 2026/11/12 19:02:18 by aradix           ###   ########.fr       */
+/*   Updated: 2026/11/12 19:53:29 by aradix           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,16 @@ int	ft_printf(const char *fmt, ...)
 	count = 0;
 	ret = 0;
 	va_start(ap, fmt);
-	while (*fmt)
+	while (count >= 0 && *fmt)
 	{
 		if (*fmt == '%')
 			ret = print_conv(*++fmt, &ap);
 		else
 			ret = write(1, fmt, 1);
 		if (ret < 0)
-			return (-1);
-		count += ret;
+			count = -1;
+		else
+			count += ret;
 		fmt++;
 	}
 	va_end(ap);

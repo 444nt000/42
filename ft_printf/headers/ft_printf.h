@@ -6,7 +6,7 @@
 /*   By: aradix <444nt000@proton.me>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 13:25:21 by aradix            #+#    #+#             */
-/*   Updated: 2026/11/12 19:04:57 by aradix           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:02:41 by aradix           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,10 @@ int				handle_uint(t_arg *arg);
 int				handle_hex_lower(t_arg *arg);
 int				handle_hex_upper(t_arg *arg);
 int				handle_percent(t_arg *arg);
+
+/* utils */
+int				ft_putnbr_base(unsigned long n, const char *base,
+					unsigned long base_len);
+size_t			ft_strlen(const char *s);
 
 #endif

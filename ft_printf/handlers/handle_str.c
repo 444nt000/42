@@ -6,7 +6,7 @@
 /*   By: aradix <444nt000@proton.me>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 16:41:59 by aradix            #+#    #+#             */
-/*   Updated: 2026/11/12 17:30:57 by aradix           ###   ########.fr       */
+/*   Updated: 2026/11/12 19:54:31 by aradix           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	handle_str(t_arg *arg)
 {
-	(void)arg;
-	return (0);
+	if (!arg->val.p)
+		return (write(1, "(null)", 6));
+	return (write(1, arg->val.p, ft_strlen(arg->val.p)));
 }
